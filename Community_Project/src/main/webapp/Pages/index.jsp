@@ -14,7 +14,7 @@
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<div>
+	<div class="topContent">
 		${dailyTop}
 		${weeklyTop}
 		${monthlyTop}

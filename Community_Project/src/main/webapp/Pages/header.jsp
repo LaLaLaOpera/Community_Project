@@ -4,9 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="./css/header.css">
 <meta charset="UTF-8">
 </head>
-<link rel="stylesheet" href="./css/header.css">
 <body>
 	<div class="headerWrap">
 		<nav class="navWrap">

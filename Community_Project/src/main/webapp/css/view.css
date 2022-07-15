@@ -4,3 +4,22 @@
 	width: 920px;
 	margin: 0 auto;
 }
+
+.commentBox{
+	background-color: skyblue;
+	border: 1px solid;
+}
+
+.subCommnetBox{
+	background-color: #dda0dd;
+	border: 1px solid;
+	margin-bottom: 5px;
+}
+
+.commentExtra>.commentInput{
+	display: none;
+}
+
+.commentExtra>.commentInput.on{
+	display: block;
+}
