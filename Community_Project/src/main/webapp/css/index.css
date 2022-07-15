@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.indexWrap{
+	width: 920px;
+	display:flex;
+	margin: 0 auto;
+	
+}
+
+.contentWrap{
+	width: 720px;
+	margin: 0 auto;
+}
+
+.cardWrapper{
+	padding: 50px;
+	border: 1px solid;
+	border-radius: 50px;
+	background-color: #E6B36D;
+	margin-bottom: 20px;
+}
+.imageWrapper{
+	border-radius: 1px;
+    background: linear-gradient()	
+}
+.cardWrapper img{
+	width: 100%;
+}
