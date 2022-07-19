@@ -12,7 +12,7 @@ public class BoardDAO extends DBConnPool{
 	
 	public List<BoardDTO> listboard(String startPage){
 		List<BoardDTO> boardList = new Vector<BoardDTO>();
-		String query = "SELECT * FROM ( SELECT tb.*, ROWNUM rNum FROM ( SELECT * FROM user_board ) tb ) WHERE rNum BETWEEN ? AND ?";
+		String query = "SELECT * FROM ( SELECT tb.*, ROWNUM rNum FROM ( SELECT * FROM user_board order by idx desc) tb ) WHERE rNum BETWEEN ? AND ?";
 		
 		try{
 			psmt = con.prepareStatement(query);

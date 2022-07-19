@@ -17,9 +17,18 @@
 }
 
 .commentExtra>.commentInput{
+	padding-bottom: 20px;
 	display: none;
 }
 
 .commentExtra>.commentInput.on{
 	display: block;
+}
+
+.commentArea{
+	min-height: 600px;
+}
+
+.subCommentArea{
+	margin-left: 50px;
 }

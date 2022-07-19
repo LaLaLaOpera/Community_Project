@@ -29,9 +29,6 @@ public class PostViewController extends HttpServlet{
 		
 		Map<String, List<SubCommentDTO>> subCommentMap = subCommentdao.queryComment(idx);
 		
-		//로그인 구현후 삭제해주자
-		HttpSession session = req.getSession();
-		session.setAttribute("user_id", "임의값");
 		
 		Contentdao.close();
 		subCommentdao.close();

@@ -28,7 +28,6 @@
 					<div class="imageWrapper">
 						<img class="thumb" src="${board.thumnail}">
 					</div>
-					<p>${board.content}</p>
 				</div>	
 			</c:forEach>
 			 <div id="endOfcontents">

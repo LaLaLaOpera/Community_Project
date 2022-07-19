@@ -15,15 +15,16 @@ import common.JSFunction;
 public class SubCommentController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
 		String writer = req.getParameter("writer");
 		String contentidx = req.getParameter("contentidx");
 		String content = req.getParameter("content");
 		String commentidx = req.getParameter("commentidx");
-		try {
-			String mention = req.getParameter("mention");
-		}catch(Exception e) {}
-		
 		SubCommentDTO dto = new SubCommentDTO();
+		try {
+			dto.setMention(req.getParameter("mention"));
+		}catch(Exception e) {}
 		dto.setBoardidx(contentidx);
 		dto.setWriter(writer);
 		dto.setContent(content);

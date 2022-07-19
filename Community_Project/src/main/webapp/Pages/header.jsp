@@ -4,9 +4,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link rel="stylesheet" href="./css/header.css">
 <meta charset="UTF-8">
 </head>
+<div class="modal_login">
+	<div class="login_content">
+		<form method="post" action="./login.do">
+			<ul>
+				<li>아이디</li>
+				<li><input type="text" name="user_id"></li>
+			</ul>
+			<ul>
+				<li>비밀번호</li>
+				<li><input type="password" name="password"></li>
+			</ul>
+			<button>로그인</button>
+			<button type="button" class="loginExit">창닫기</button>
+		</form>
+	</div>
+</div>
+<div class="modal_signUp">
+	<div class="signup_content">
+		<form method="post" action="./signUp.do">
+			<ul>
+				<li>아이디</li>
+				<li><input type="text" name="user_id"></li>
+			</ul>
+			<ul>
+				<li>비밀번호</li>
+				<li><input type="password" name="password"></li>
+			</ul>
+			<ul>
+				<li>이메일</li>
+				<li><input type="text" name="user_email"></li>
+			</ul>
+			<ul>
+				<li>이름</li>
+				<li><input type="text" name="user_name"></li>
+			</ul>
+			<button>회원가입</button>
+			<button type="button" class="signUpExit">창닫기</button>
+		</form>
+	</div>
+</div>
 <body>
 	<div class="headerWrap">
 		<nav class="navWrap">
@@ -20,9 +61,9 @@
 			<div class="header_menu">
 				<ul>
 				<c:choose>
-					<c:when test="${sessionScope.user_id eq null}">
-						<li><a href="">로그인</a></li>
-						<li><a href="">회원가입</a></li>
+					<c:when test="${sessionScope.user_info eq null}">
+						<li><a class="loginBtn">로그인</a></li>
+						<li><a class="signUpBtn">회원가입</a></li>
 					</c:when>
 					<c:otherwise>
 						<li><a href="">기타</a></li>
@@ -53,6 +94,7 @@
 			</ul>
 		</div>
 	</div>
+
 	<script src="./js/header.js"></script>
 </body>
 </html>

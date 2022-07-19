@@ -15,3 +15,30 @@ AccBtn.addEventListener("click", function(){
 		AccordionToggle = false;
 	}
 });
+
+$('.loginBtn').click(function(){
+
+    $('.modal_login').addClass('on')
+    return false
+})
+
+$('.signUpBtn').click(function(){
+
+    $('.modal_signUp').addClass('on')
+    return false
+})
+
+$('.loginExit').click(function(){
+
+    $('.modal_login').removeClass('on')
+    return false
+})
+
+$('.signUpExit').click(function(){
+
+    $('.modal_signUp').removeClass('on')
+    return false
+})
+
+
+

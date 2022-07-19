@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 .indexWrap{
-	width: 1200px;
+	width: 1120px;
 	display:flex;
 	margin: 0 auto;
 	
 }
 
 .contentWrap{
-	width: 960px;
+	width: 800x;
 	margin: 0 auto;
 }
 
@@ -19,16 +19,13 @@
 	background-color: #E6B36D;
 	margin-bottom: 20px;
 }
-.imageWrapper{
-	border-radius: 1px;
-    background: linear-gradient()	
-}
+
 .cardWrapper img{
 	width: 100%;
 }
 
 .topContent{
-	width: 1200px;
+	width: 1120px;
 	height: 300px;
 	background: maroon;
 	margin: 0 auto;

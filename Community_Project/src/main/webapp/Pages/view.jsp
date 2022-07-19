@@ -14,10 +14,11 @@
 	<div class="contentWrap">
 		<div class="contentArea">
 			<div>
-				<p>글부분</p>
-				${Contentdto.title }
-				<img alt="" src="${Contentdto.thumnail}">
-				${Contentdto.content}
+				<h2>${Contentdto.title }</h2>
+				<div>
+					<img alt="" src="${Contentdto.thumnail}">
+				</div>
+				<p>${Contentdto.content}</p>
 			</div>
 		</div>
 		<div class="commentArea">
@@ -25,7 +26,7 @@
 			<div class="commentInput">
 				<form method="post" action="commentProcess.do"  onsubmit="return checkComment(this)" >
 					<input type="hidden" value="${Contentdto.idx}" name="contentidx">
-					<input name="writer" value="${sessionScope.user_id}" type="hidden">
+					<input name="writer" value="${sessionScope.user_info.user_id}" type="hidden">
 					<input name="content" type="text">
 					<button type="submit">댓글전송</button>
 				</form>
@@ -45,9 +46,9 @@
 							<form action="subProcess.do"  method="post" onsubmit="return checkComment(this)">
 								<input type="hidden" value="${Contentdto.idx}" name="contentidx">
 								<input type="hidden" value="${comment.idx}" name="commentidx">
-								<input type="hidden" value="${sessionScope.user_id}" name="writer">
+								<input type="hidden" value="${sessionScope.user_info.user_id}" name="writer">
 								<input type="text" name="content">
-								<a type="submit">댓글전송</a>
+								<button type="submit">댓글전송</button>
 							</form>
 						</div>
 					</div>
@@ -59,6 +60,9 @@
 							${subcomment.writer}
 							</div>
 							<div class="commentcontent">
+							<c:if test="${!(subcomment.mention eq null)}">
+								@${subcomment.mention}
+							</c:if>
 							${subcomment.content}
 							</div>
 							<div class="commentExtra">
@@ -67,9 +71,8 @@
 									<form action="subProcess.do" method="post" onsubmit="return checkComment(this)">
 										<input type="hidden" value="${Contentdto.idx}" name="contentidx">
 										<input type="hidden" value="${subcomment.commentidx}" name="commentidx">
-										<input type="hidden" value="${subcomment.writer}" name="mention">
-										<input type="hidden" value="${sessionScope.user_id}" name="writer">
-										<span>@${subcomment.writer}</span>
+										To<input type="text" value="${subcomment.writer}" name="mention" readonly>
+										<input type="hidden" value="${sessionScope.user_info.user_id}" name="writer">
 										<input type="text" name="content" class="subComment">
 										<button type="submit">댓글전송</button>
 									</form>
