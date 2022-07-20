@@ -67,4 +67,21 @@ public class JSFunction {
 			e.printStackTrace();
 		}
 	}
+	public static void refreshBack(HttpServletResponse resp, String msg) {
+		try {
+			//서블릿에서 내용을 출력하기위해 콘텐츠 타입 지정
+			resp.setContentType("text/html;charset=UTF-8");
+			PrintWriter writer = resp.getWriter();
+			
+			String script = "<script>"
+					+ "		alert('" + msg + "');"
+					+ "		history.back()"
+					+ "</script>";
+			writer.print(script);
+		}catch(Exception e) {
+			System.out.println("alertBack 문제");
+			e.printStackTrace();
+		}
+	}
+	
 }

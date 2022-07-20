@@ -80,7 +80,11 @@
 							</div>	
 						</div>
 					</c:forEach>
+					<c:if test="${subCommentMap[comment.idx].size() == 0}">
+						<p>답글이 없습니다.</p>
+					</c:if>
 				</div>
+				<a class="subCommentAreaActive">답글 보기</a>
 			</c:forEach>
 		</div>
 	</div>

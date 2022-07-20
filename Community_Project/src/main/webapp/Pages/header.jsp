@@ -66,7 +66,7 @@
 						<li><a class="signUpBtn">회원가입</a></li>
 					</c:when>
 					<c:otherwise>
-						<li><a href="">기타</a></li>
+						<li><a href="./logOut.do">로그아웃</a></li>
 						<li><a href="">등등</a></li>
 						<li><a href="">필요한기능</a></li>
 					</c:otherwise>

@@ -29,7 +29,7 @@ public class SignupController extends HttpServlet{
 		MemberDAO dao = new MemberDAO();
 		
 		int result = dao.RegisterUser(dto);
-		
+		dao.close();
 		if (result == 1) {
 			JSFunction.alertLocation(resp, "회원가입이 완료되었습니다. 로그인해주세요", "index.do?Start=1");
 		}else {

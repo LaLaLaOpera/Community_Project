@@ -31,6 +31,7 @@ public class PostViewController extends HttpServlet{
 		
 		
 		Contentdao.close();
+		Commentdao.close();
 		subCommentdao.close();
 		
 		req.setAttribute("Contentdto", Contentdto);

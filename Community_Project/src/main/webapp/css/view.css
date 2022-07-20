@@ -31,4 +31,12 @@
 
 .subCommentArea{
 	margin-left: 50px;
+	display: none;
+}
+
+.subCommentArea.on{
+	display: block
+}
+.subCommentAreaActive{
+	margin-left: 50px;
 }
