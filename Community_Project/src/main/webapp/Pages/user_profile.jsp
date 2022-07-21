@@ -35,7 +35,7 @@
 		</div>
 		<div class="rightsideWrap">
 			<div class="user_info">
-			
+				
 			</div>
 			<div class="footer">
 			
