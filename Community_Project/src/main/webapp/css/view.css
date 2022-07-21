@@ -1,10 +1,20 @@
 @charset "UTF-8";
 
 .contentWrap{
+	min-height: 600px;
 	width: 920px;
 	margin: 0 auto;
+	margin-top: 150px;
 }
 
+.contentArea img{
+	max-width: 400px;
+	height: auto;
+}
+.contentArea{
+	align-content:center;
+	text-align: center;
+}
 .commentBox{
 	background-color: skyblue;
 	border: 1px solid;

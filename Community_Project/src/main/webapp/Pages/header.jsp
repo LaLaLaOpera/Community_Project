@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="./css/header.css">
 <meta charset="UTF-8">
 </head>
+
+<body>
 <div class="modal_login">
 	<div class="login_content">
 		<form method="post" action="./login.do">
@@ -48,7 +50,6 @@
 		</form>
 	</div>
 </div>
-<body>
 	<div class="headerWrap">
 		<nav class="navWrap">
 			<h2 class="logo" onclick="location.href='index.do?Start=1'">logo</h2>

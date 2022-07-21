@@ -10,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Main Page</title>
-<link href="./css/index.css" rel="stylesheet">
+<link href="./css/user_profile.css" rel="stylesheet">
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
@@ -34,8 +34,14 @@
 			</div>
 		</div>
 		<div class="rightsideWrap">
-		기타정보를 넣어둔다.
+			<div class="user_info">
+			
+			</div>
+			<div class="footer">
+			
+			</div>
 		</div>
 	</div>
+	<script src="./js/user_profile.js"></script>
 </body>
 </html>
