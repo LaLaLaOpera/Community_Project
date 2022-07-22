@@ -40,6 +40,7 @@ public class CommentDAO extends DBConnPool{
 				dto.setBoardidx(idx);
 				dto.setIdx(rs.getString("idx"));
 				dto.setContent(rs.getString("content"));
+				dto.setContent(dto.getContent().replaceAll("\r\n", "<br>"));
 				dto.setPostdate(rs.getDate("postdate"));
 				dto.setRecommanded(rs.getString("recommanded"));
 				dto.setWriter(rs.getString("writer"));

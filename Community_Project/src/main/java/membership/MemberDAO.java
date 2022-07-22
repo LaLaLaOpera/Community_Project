@@ -7,7 +7,7 @@ public class MemberDAO extends DBConnPool{
 		int result = 0;
 		
 		String query = "Insert into membership values"
-				+ " (?, NEXT_USER_SEQ.NEXTVAL, ?, '0', ?, ?, 'adventurer', '0', '1', '0')";
+				+ " (?, NEXT_USER_SEQ.NEXTVAL, ?, '0', ?, ?, 'adventurer', '0', '1', '0', '1')";
 		
 		try {
 			psmt = con.prepareStatement(query);
@@ -50,6 +50,7 @@ public class MemberDAO extends DBConnPool{
 				dto.setUser_level(rs.getString("user_level"));
 				dto.setUser_name(rs.getString("user_name"));
 				dto.setUser_num(rs.getString("user_num"));
+				dto.setProfile_img(rs.getString("profile_img"));
 			}
 			
 		}catch(Exception e) {

@@ -1,13 +1,13 @@
 $('.commentActive').click(function(){
 
-    let d = $(this).siblings('.commentInput').css('display');
+    let d = $(this).parent().siblings('.commentInput').css('display');
 
-    if(d=='block'){
+    if(d=='grid'){
         $('.commentInput').removeClass('on')
     }
     else{
         $('.commentInput').removeClass('on')
-        $(this).next().addClass('on')
+        $(this).parent().next().addClass('on')
     }
     return false
 })
@@ -23,13 +23,13 @@ function checkComment(frm){
 
 $('.subCommentAreaActive').click(function(){
 	
-	let d = $(this).prev().css('display');
+	let d = $(this).parent().parent().next().css('display');
 	
 	if(d=="block"){
-		$(this).prev().removeClass('on')
+		$(this).parent().parent().next().removeClass('on')
 		$(this).text('답글보기')
 	}else{
-		$(this).prev().addClass('on')
+		$(this).parent().parent().next().addClass('on')
 		$(this).text('답글접기')
 	}
 })

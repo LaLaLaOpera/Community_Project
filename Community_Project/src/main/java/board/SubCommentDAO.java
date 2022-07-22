@@ -59,6 +59,7 @@ public class SubCommentDAO extends DBConnPool{
 					dto.setBoardidx(idx);
 					dto.setCommentidx(String.valueOf(i));
 					dto.setContent(rs.getString("content"));
+					dto.setContent(dto.getContent().replaceAll("\r\n", "<br>"));
 					dto.setMention(rs.getString("mention"));
 					dto.setPostdate(rs.getDate("postdate"));
 					dto.setRecommanded(rs.getString("recommanded"));

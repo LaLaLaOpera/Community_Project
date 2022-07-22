@@ -11,6 +11,7 @@ public class MemberDTO {
 	private String auth_level;
 	private String user_level;
 	private int user_exp;
+	private String profile_img;
 	public String getUser_id() {
 		return user_id;
 	}
@@ -70,6 +71,12 @@ public class MemberDTO {
 	}
 	public void setUser_exp(int user_exp) {
 		this.user_exp = user_exp;
+	}
+	public String getProfile_img() {
+		return profile_img;
+	}
+	public void setProfile_img(String profile_img) {
+		this.profile_img = profile_img;
 	}
 	
 	

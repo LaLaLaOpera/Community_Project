@@ -133,3 +133,7 @@ input:focus{
 	top: 30%;
 	margin-left: -200px;
 }
+.header_buffer{
+	width: 100%;
+	height: 100px;
+}
